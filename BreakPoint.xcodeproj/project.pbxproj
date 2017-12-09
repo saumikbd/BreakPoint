@@ -15,6 +15,8 @@
 		D078AB941FDC6EFA00CF0D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D078AB931FDC6EFA00CF0D70 /* Assets.xcassets */; };
 		D078AB971FDC6EFA00CF0D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D078AB951FDC6EFA00CF0D70 /* LaunchScreen.storyboard */; };
 		D078ABA41FDC741700CF0D70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D078ABA31FDC741700CF0D70 /* GoogleService-Info.plist */; };
+		D078ABA71FDC7A1800CF0D70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078ABA61FDC7A1800CF0D70 /* Constants.swift */; };
+		D078ABAA1FDC7A8C00CF0D70 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078ABA91FDC7A8C00CF0D70 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D078AB961FDC6EFA00CF0D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D078AB981FDC6EFA00CF0D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D078ABA31FDC741700CF0D70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D078ABA61FDC7A1800CF0D70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D078ABA91FDC7A8C00CF0D70 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		D078AB891FDC6EFA00CF0D70 /* BreakPoint */ = {
 			isa = PBXGroup;
 			children = (
+				D078ABA51FDC7A0500CF0D70 /* Constants */,
 				D078ABA21FDC703D00CF0D70 /* Extensions */,
 				D078ABA11FDC703400CF0D70 /* Services */,
 				D078ABA01FDC6F1700CF0D70 /* Model */,
@@ -114,6 +119,7 @@
 		D078ABA11FDC703400CF0D70 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D078ABA91FDC7A8C00CF0D70 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D078ABA51FDC7A0500CF0D70 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D078ABA61FDC7A1800CF0D70 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		DBD2AFD428372157867793EB /* Pods */ = {
@@ -259,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D078AB8F1FDC6EFA00CF0D70 /* SecondViewController.swift in Sources */,
+				D078ABA71FDC7A1800CF0D70 /* Constants.swift in Sources */,
 				D078AB8B1FDC6EFA00CF0D70 /* AppDelegate.swift in Sources */,
 				D078AB8D1FDC6EFA00CF0D70 /* FirstViewController.swift in Sources */,
+				D078ABAA1FDC7A8C00CF0D70 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
