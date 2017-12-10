@@ -9,5 +9,9 @@
 import Foundation
 import Firebase
 
+//Completion Handlers
+typealias CompletionHandler = (_ Status:Bool, _ error: Error?) -> ()
 
+//URLS
 let BASE_URL = Database.database().reference()
+

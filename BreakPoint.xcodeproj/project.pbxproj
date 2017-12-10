@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35B278ADB29CCCF415AD9721 /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C58664B7AE2740135E5B5E /* Pods_BreakPoint.framework */; };
+		D03DAC081FDD2D3600D98E12 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DAC071FDD2D3600D98E12 /* AuthService.swift */; };
 		D078AB8B1FDC6EFA00CF0D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078AB8A1FDC6EFA00CF0D70 /* AppDelegate.swift */; };
 		D078AB8D1FDC6EFA00CF0D70 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078AB8C1FDC6EFA00CF0D70 /* FirstViewController.swift */; };
 		D078AB8F1FDC6EFA00CF0D70 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078AB8E1FDC6EFA00CF0D70 /* SecondViewController.swift */; };
@@ -27,6 +28,7 @@
 		0C5E5FF7F13BEDBD74743872 /* Pods-BreakPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.debug.xcconfig"; sourceTree = "<group>"; };
 		5E88195F46FAEEFECBAF3BBA /* Pods-BreakPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.release.xcconfig"; sourceTree = "<group>"; };
 		67C58664B7AE2740135E5B5E /* Pods_BreakPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D03DAC071FDD2D3600D98E12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D078AB871FDC6EFA00CF0D70 /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D078AB8A1FDC6EFA00CF0D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D078AB8C1FDC6EFA00CF0D70 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D078ABA91FDC7A8C00CF0D70 /* DataService.swift */,
+				D03DAC071FDD2D3600D98E12 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				D078ABB01FDC91B200CF0D70 /* InsetTextField.swift in Sources */,
 				D078ABA71FDC7A1800CF0D70 /* Constants.swift in Sources */,
 				D078AB8B1FDC6EFA00CF0D70 /* AppDelegate.swift in Sources */,
+				D03DAC081FDD2D3600D98E12 /* AuthService.swift in Sources */,
 				D078AB8D1FDC6EFA00CF0D70 /* FirstViewController.swift in Sources */,
 				D078ABAA1FDC7A8C00CF0D70 /* DataService.swift in Sources */,
 			);
