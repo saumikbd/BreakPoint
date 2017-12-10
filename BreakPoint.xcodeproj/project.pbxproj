@@ -11,6 +11,7 @@
 		D03DAC081FDD2D3600D98E12 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DAC071FDD2D3600D98E12 /* AuthService.swift */; };
 		D03DAC0A1FDDB72400D98E12 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DAC091FDDB72400D98E12 /* MeVC.swift */; };
 		D03DAC0C1FDDC46C00D98E12 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DAC0B1FDDC46C00D98E12 /* CreatePostVC.swift */; };
+		D03DAC0E1FDDD43200D98E12 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DAC0D1FDDD43200D98E12 /* UIViewExt.swift */; };
 		D078AB8B1FDC6EFA00CF0D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078AB8A1FDC6EFA00CF0D70 /* AppDelegate.swift */; };
 		D078AB8D1FDC6EFA00CF0D70 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078AB8C1FDC6EFA00CF0D70 /* FeedVC.swift */; };
 		D078AB8F1FDC6EFA00CF0D70 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078AB8E1FDC6EFA00CF0D70 /* GroupsVC.swift */; };
@@ -33,6 +34,7 @@
 		D03DAC071FDD2D3600D98E12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D03DAC091FDDB72400D98E12 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		D03DAC0B1FDDC46C00D98E12 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		D03DAC0D1FDDD43200D98E12 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		D078AB871FDC6EFA00CF0D70 /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D078AB8A1FDC6EFA00CF0D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D078AB8C1FDC6EFA00CF0D70 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		D078ABA21FDC703D00CF0D70 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D03DAC0D1FDDD43200D98E12 /* UIViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03DAC0E1FDDD43200D98E12 /* UIViewExt.swift in Sources */,
 				D078ABB21FDC9DE300CF0D70 /* ShadowView.swift in Sources */,
 				D078ABAC1FDC916300CF0D70 /* AuthVC.swift in Sources */,
 				D078AB8F1FDC6EFA00CF0D70 /* GroupsVC.swift in Sources */,
