@@ -21,7 +21,17 @@ class AuthVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func facebookLoginButtonPressed(_ sender: Any) {
+    }
+    @IBAction func googleLoginButtonPressed(_ sender: Any) {
+    }
+    @IBAction func emailLoginButtonPressed(_ sender: Any) {
+        guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") else {return}
+        present(loginVC, animated: true, completion: nil)
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

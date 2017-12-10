@@ -10,6 +10,14 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    
+    @IBOutlet weak var emailTextField: InsetTextField!
+    
+    @IBOutlet weak var passwordTextField: InsetTextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +29,33 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func logInButtonTapped(_ sender: Any) {
+        if emailTextField.text != nil && passwordTextField.text != nil {
+            AuthService.instance.loginUser(withEmail: emailTextField.text!, andPassword: passwordTextField.text!, completion: { (success, error) in
+                if success{
+                    self.dismiss(animated: true, completion: nil)
+                } else{
+                    debugPrint(error?.localizedDescription as Any)
+                    AuthService.instance.registerUser(withEmail: self.emailTextField.text!, andPassword: self.passwordTextField.text!, completion: { (success, error) in
+                        if success {
+                            AuthService.instance.loginUser(withEmail: self.emailTextField.text!, andPassword: self.passwordTextField.text!, completion: { (success, error) in
+                                self.dismiss(animated: true, completion: nil)
+                            })
+                        }else{
+                            debugPrint(error?.localizedDescription as Any)
+                        }
+                    })
+                }
+            })
+        }
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
