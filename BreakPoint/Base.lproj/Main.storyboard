@@ -44,6 +44,9 @@
                                             <constraint firstAttribute="height" constant="24" id="5uh-TU-NtM"/>
                                         </constraints>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="dYI-PA-BHs" kind="presentation" id="Hih-GR-Cib"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549018" green="0.15686274509803921" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,6 +88,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Create PostVC-->
+        <scene sceneID="4h1-dZ-GOI">
+            <objects>
+                <viewController id="dYI-PA-BHs" customClass="CreatePostVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVj-yk-c9c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JF3-f1-bte">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_postsomething" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ6-mg-Vyv">
+                                        <rect key="frame" x="103.5" y="30.5" width="169" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23.5" id="tcn-FT-6Nz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcX-iN-mPP">
+                                        <rect key="frame" x="20" y="30" width="21" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="1Ff-zu-Ma9"/>
+                                            <constraint firstAttribute="height" constant="24" id="qlY-Qf-A3g"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="dYI-PA-BHs" eventType="touchUpInside" id="ZAB-lH-I6O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.15686274510000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lcX-iN-mPP" firstAttribute="top" secondItem="JF3-f1-bte" secondAttribute="top" constant="30" id="6e7-cP-wJT"/>
+                                    <constraint firstItem="lcX-iN-mPP" firstAttribute="leading" secondItem="JF3-f1-bte" secondAttribute="leading" constant="20" id="A8C-ph-j9e"/>
+                                    <constraint firstItem="eZ6-mg-Vyv" firstAttribute="centerX" secondItem="JF3-f1-bte" secondAttribute="centerX" id="jy2-6m-qcn"/>
+                                    <constraint firstAttribute="height" constant="80" id="lkc-wf-CsC"/>
+                                    <constraint firstItem="lcX-iN-mPP" firstAttribute="centerY" secondItem="eZ6-mg-Vyv" secondAttribute="centerY" id="py1-Aw-iCs"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-BD-W14">
+                                <rect key="frame" x="20" y="100" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GVf-94-LaX"/>
+                                    <constraint firstAttribute="width" constant="60" id="w3G-0d-luW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@brekpoint.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-ct-L2a">
+                                <rect key="frame" x="100" y="120" width="255" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Say something here ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bOC-4W-1D3">
+                                <rect key="frame" x="20" y="180" width="335" height="360"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="T8b-o4-QeT"/>
+                                </constraints>
+                                <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqG-ib-PxN">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.15686274510000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6fF-Gf-wKi"/>
+                                </constraints>
+                                <state key="normal" title="  SEND" image="send">
+                                    <color key="titleColor" red="0.30214685201644897" green="0.74723225831985474" blue="0.33267867565155029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonTapped:" destination="dYI-PA-BHs" eventType="touchUpInside" id="phd-Rv-Bk8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JF3-f1-bte" firstAttribute="trailing" secondItem="vSC-Nr-uxn" secondAttribute="trailing" id="3Jo-jr-WOq"/>
+                            <constraint firstItem="bOC-4W-1D3" firstAttribute="leading" secondItem="vSC-Nr-uxn" secondAttribute="leading" constant="20" id="4vB-8E-N6N"/>
+                            <constraint firstItem="JF3-f1-bte" firstAttribute="top" secondItem="DVj-yk-c9c" secondAttribute="top" id="8hx-31-rEj"/>
+                            <constraint firstItem="JqG-ib-PxN" firstAttribute="leading" secondItem="vSC-Nr-uxn" secondAttribute="leading" id="D3H-dI-nOl"/>
+                            <constraint firstItem="EZH-BD-W14" firstAttribute="top" secondItem="JF3-f1-bte" secondAttribute="bottom" constant="20" id="LaO-Qe-Hhv"/>
+                            <constraint firstItem="S7p-ct-L2a" firstAttribute="centerY" secondItem="EZH-BD-W14" secondAttribute="centerY" id="NCJ-sw-vFr"/>
+                            <constraint firstItem="JqG-ib-PxN" firstAttribute="trailing" secondItem="vSC-Nr-uxn" secondAttribute="trailing" id="NhT-ix-7ez"/>
+                            <constraint firstItem="bOC-4W-1D3" firstAttribute="top" secondItem="EZH-BD-W14" secondAttribute="bottom" constant="20" id="Rsh-aX-skK"/>
+                            <constraint firstItem="EZH-BD-W14" firstAttribute="leading" secondItem="vSC-Nr-uxn" secondAttribute="leading" constant="20" id="fRp-3z-lcF"/>
+                            <constraint firstItem="S7p-ct-L2a" firstAttribute="leading" secondItem="EZH-BD-W14" secondAttribute="trailing" constant="20" id="kCt-3y-SlP"/>
+                            <constraint firstItem="vSC-Nr-uxn" firstAttribute="trailing" secondItem="bOC-4W-1D3" secondAttribute="trailing" constant="20" id="qGX-dS-ir6"/>
+                            <constraint firstItem="vSC-Nr-uxn" firstAttribute="bottom" secondItem="JqG-ib-PxN" secondAttribute="bottom" id="r2M-CO-dkI"/>
+                            <constraint firstItem="vSC-Nr-uxn" firstAttribute="trailing" secondItem="S7p-ct-L2a" secondAttribute="trailing" constant="20" id="unx-0f-AMZ"/>
+                            <constraint firstItem="JF3-f1-bte" firstAttribute="leading" secondItem="vSC-Nr-uxn" secondAttribute="leading" id="z9k-Jt-Wo9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vSC-Nr-uxn"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="S7p-ct-L2a" id="khA-a0-bkt"/>
+                        <outlet property="profileImage" destination="EZH-BD-W14" id="D3Y-df-ez7"/>
+                        <outlet property="sendButton" destination="JqG-ib-PxN" id="2tm-7H-tvm"/>
+                        <outlet property="textView" destination="bOC-4W-1D3" id="dUM-mQ-FY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ob-wh-I0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429.5999999999999" y="-679.61019490254876"/>
         </scene>
         <!--Me-->
         <scene sceneID="LxS-Vq-yTX">
@@ -139,8 +250,8 @@
                                             <constraint firstAttribute="height" constant="102" id="zSj-BG-xIT"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="me@brekpoint.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYU-z0-Sqv">
-                                        <rect key="frame" x="101" y="147" width="173.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@brekpoint.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYU-z0-Sqv">
+                                        <rect key="frame" x="90" y="147" width="195.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -477,6 +588,7 @@
         <image name="loginBGImage" width="375" height="284"/>
         <image name="logoutIcon" width="19" height="21"/>
         <image name="me-tabIcon" width="25" height="25"/>
+        <image name="send" width="29" height="29"/>
     </resources>
     <color key="tintColor" red="0.015686274509803921" green="0.6705882352941176" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
 </document>
