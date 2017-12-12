@@ -33,6 +33,18 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
     }
+    
+    func getUsername(uid : String, completion: @escaping CompletionHandlerGetUsername) {
+        REF_USERS.observeSingleEvent(of: DataEventType.value) { (userDataSnapShot) in
+            guard let userDataSnapShot = userDataSnapShot.children.allObjects as? [DataSnapshot] else {return}
+            for user in userDataSnapShot {
+                if user.key == uid {
+                    completion(user.childSnapshot(forPath: "email").value as! String)
+                }
+            }
+        }
+    }
+    
     func uploadPost(withMessage message: String, forId uid: String, withGroupKey groupKey: String?, completion: @escaping CompletionHandlerGeneral){
         if groupKey != nil {
             //with a group key

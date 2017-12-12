@@ -13,6 +13,7 @@ import Firebase
 typealias CompletionHandler = (_ Status:Bool, _ error: Error?) -> ()
 typealias CompletionHandlerGeneral = (_ Status:Bool) -> ()
 typealias CompletionHandlerMessage = (_ messageArray:[Message]) -> ()
+typealias CompletionHandlerGetUsername = (_ username:String) -> ()
 
 //URLS
 let BASE_URL = Database.database().reference()
