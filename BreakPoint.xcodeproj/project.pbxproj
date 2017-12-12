@@ -27,6 +27,7 @@
 		D078ABAE1FDC917200CF0D70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078ABAD1FDC917200CF0D70 /* LoginVC.swift */; };
 		D078ABB01FDC91B200CF0D70 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078ABAF1FDC91B200CF0D70 /* InsetTextField.swift */; };
 		D078ABB21FDC9DE300CF0D70 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078ABB11FDC9DE300CF0D70 /* ShadowView.swift */; };
+		D081DBF71FE07DF3002A59DD /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081DBF61FE07DF3002A59DD /* CreateGroupVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D078ABAD1FDC917200CF0D70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D078ABAF1FDC91B200CF0D70 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		D078ABB11FDC9DE300CF0D70 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		D081DBF61FE07DF3002A59DD /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				D078ABAD1FDC917200CF0D70 /* LoginVC.swift */,
 				D03DAC091FDDB72400D98E12 /* MeVC.swift */,
 				D03DAC0B1FDDC46C00D98E12 /* CreatePostVC.swift */,
+				D081DBF61FE07DF3002A59DD /* CreateGroupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				D078ABB01FDC91B200CF0D70 /* InsetTextField.swift in Sources */,
 				D078ABA71FDC7A1800CF0D70 /* Constants.swift in Sources */,
 				D03DAC101FDDE64D00D98E12 /* FeedCell.swift in Sources */,
+				D081DBF71FE07DF3002A59DD /* CreateGroupVC.swift in Sources */,
 				D078AB8B1FDC6EFA00CF0D70 /* AppDelegate.swift in Sources */,
 				D03DAC0A1FDDB72400D98E12 /* MeVC.swift in Sources */,
 				D03DAC121FDDEA3E00D98E12 /* Message.swift in Sources */,
