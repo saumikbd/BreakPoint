@@ -471,7 +471,7 @@
         <!--Group FeedVC-->
         <scene sceneID="Jfv-EK-OYI">
             <objects>
-                <viewController id="efX-Oh-n3q" customClass="GroupFeedVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupFeedVC" id="efX-Oh-n3q" customClass="GroupFeedVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aA7-qM-1BT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,10 +569,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDe-tp-0dL">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-xq-vJM" customClass="InsetTextField" customModule="BreakPoint" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="write a message ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-xq-vJM" customClass="InsetTextField" customModule="BreakPoint" customModuleProvider="target">
                                         <rect key="frame" x="15" y="15" width="307" height="30"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.15686274510000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -605,13 +605,13 @@
                         <constraints>
                             <constraint firstItem="zW8-MU-yaa" firstAttribute="leading" secondItem="yVM-6H-4kt" secondAttribute="leading" id="39A-5j-LMQ"/>
                             <constraint firstItem="lAR-Cm-4f7" firstAttribute="trailing" secondItem="yVM-6H-4kt" secondAttribute="trailing" constant="-8" id="560-5x-6Np"/>
+                            <constraint firstItem="tDe-tp-0dL" firstAttribute="top" secondItem="dOd-Io-dQB" secondAttribute="bottom" id="5CR-ea-fJq"/>
                             <constraint firstItem="zW8-MU-yaa" firstAttribute="top" secondItem="aA7-qM-1BT" secondAttribute="top" id="Iid-4t-sFW"/>
                             <constraint firstItem="dOd-Io-dQB" firstAttribute="trailing" secondItem="yVM-6H-4kt" secondAttribute="trailing" id="MHj-Ye-hte"/>
                             <constraint firstItem="tDe-tp-0dL" firstAttribute="leading" secondItem="yVM-6H-4kt" secondAttribute="leading" id="MgR-R5-CTd"/>
                             <constraint firstItem="lAR-Cm-4f7" firstAttribute="leading" secondItem="yVM-6H-4kt" secondAttribute="leading" constant="8" id="TiV-XR-7Tn"/>
                             <constraint firstItem="dOd-Io-dQB" firstAttribute="top" secondItem="lAR-Cm-4f7" secondAttribute="bottom" id="Tz1-Qo-8q5"/>
                             <constraint firstItem="tDe-tp-0dL" firstAttribute="bottom" secondItem="yVM-6H-4kt" secondAttribute="bottom" id="Veu-qT-yfy"/>
-                            <constraint firstItem="tDe-tp-0dL" firstAttribute="top" secondItem="dOd-Io-dQB" secondAttribute="bottom" id="WF3-cF-Gql"/>
                             <constraint firstItem="lAR-Cm-4f7" firstAttribute="top" secondItem="zW8-MU-yaa" secondAttribute="bottom" id="got-mn-62C"/>
                             <constraint firstItem="tDe-tp-0dL" firstAttribute="trailing" secondItem="yVM-6H-4kt" secondAttribute="trailing" id="tZw-CG-fl1"/>
                             <constraint firstItem="zW8-MU-yaa" firstAttribute="trailing" secondItem="yVM-6H-4kt" secondAttribute="trailing" id="xRI-0N-lKy"/>
