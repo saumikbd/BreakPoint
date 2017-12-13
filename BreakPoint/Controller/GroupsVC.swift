@@ -23,7 +23,7 @@ class GroupsVC: UIViewController {
                 self.groups = groups
                 self.groupsTableView.reloadData()
             }
-        }        
+        }
     }
 }
 extension GroupsVC: UITableViewDataSource, UITableViewDelegate {
