@@ -74,6 +74,23 @@ class DataService {
         }
     }
     
+    func getGroups(completion: @escaping CompletionHandlerGetGroups){
+        var groups = [Group]()
+        REF_GROUPS.observeSingleEvent(of: DataEventType.value) { (groupSnapshot) in
+            guard let groupSnapshot = groupSnapshot.children.allObjects as? [DataSnapshot] else{return}
+            for group in groupSnapshot {
+                let members = group.childSnapshot(forPath: "members").value as! [String]
+                if members.contains((Auth.auth().currentUser?.uid)!){
+                    let title = group.childSnapshot(forPath: "title").value as! String
+                    let description = group.childSnapshot(forPath: "description").value as! String
+                    let newGroup = Group(title: title, description: description, members: members, membersCount: members.count, key: group.key)
+                    groups.append(newGroup)
+                }
+            }
+            completion(groups)
+        }
+    }
+    
     func getEmail(forQuery query: String, completion: @escaping CompletionHandlerGetEmail){
         var emailArray = [String]()
         REF_USERS.observe(DataEventType.value) { (userDataSnapshot) in
