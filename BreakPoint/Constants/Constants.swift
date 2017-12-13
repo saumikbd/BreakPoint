@@ -15,6 +15,7 @@ typealias CompletionHandlerGeneral = (_ Status:Bool) -> ()
 typealias CompletionHandlerMessage = (_ messageArray:[Message]) -> ()
 typealias CompletionHandlerGetUsername = (_ username:String) -> ()
 typealias CompletionHandlerGetEmail = (_ emailArray:[String])->()
+typealias CompletionHandlerGetUid = (_ uidArray:[String])->()
 
 //URLS
 let BASE_URL = Database.database().reference()

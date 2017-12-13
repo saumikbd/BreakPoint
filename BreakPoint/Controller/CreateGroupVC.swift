@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateGroupVC: UIViewController {
 
     @IBOutlet weak var titleTextField: InsetTextField!
-    @IBOutlet weak var dercriptionTextField: InsetTextField!
+    @IBOutlet weak var descriptionTextField: InsetTextField!
     @IBOutlet weak var emailSearchTextField: InsetTextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupMemberLabel: UILabel!
@@ -41,6 +42,17 @@ class CreateGroupVC: UIViewController {
     }
 
     @IBAction func doneButtonPressed(_ sender: Any) {
+        if titleTextField.text != "" && descriptionTextField.text != "" {
+        DataService.instance.getUid(emailArray: chosenUserArray) { (membersArray) in
+            var members = membersArray
+            members.append((Auth.auth().currentUser?.uid)!)
+            DataService.instance.uploadGroup(withTitle: self.titleTextField.text!, Description: self.descriptionTextField.text! , andUids: members, completion: { (success) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        }
+        }
     }
     
     

@@ -45,6 +45,7 @@ class DataService {
         }
     }
     
+    
     func uploadPost(withMessage message: String, forId uid: String, withGroupKey groupKey: String?, completion: @escaping CompletionHandlerGeneral){
         if groupKey != nil {
             //with a group key
@@ -52,6 +53,11 @@ class DataService {
                 REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId" : uid ])
                 completion(true)
         }
+    }
+    
+    func uploadGroup(withTitle title: String, Description description: String, andUids members: [String], completion: @escaping CompletionHandlerGeneral){
+        REF_GROUPS.childByAutoId().updateChildValues(["title": title, "description": description, "members": members])
+        completion(true)
     }
     
     func getAllFeedMessages(completion: @escaping CompletionHandlerMessage){
@@ -80,6 +86,19 @@ class DataService {
             }
             completion(emailArray)
         }
+    }
+    func getUid(emailArray: [String], completion: @escaping CompletionHandlerGetUid){
+        var uidArray = [String]()
+        REF_USERS.observeSingleEvent(of: DataEventType.value) { (userDataSnapshot) in
+            guard let userDataSnapshot = userDataSnapshot.children.allObjects as? [DataSnapshot] else{return}
+            for user in userDataSnapshot {
+                if emailArray.contains(user.childSnapshot(forPath: "email").value as! String) {
+                    uidArray.append(user.key)
+                }
+            }
+            completion(uidArray)
+        }
+        
     }
     
 }

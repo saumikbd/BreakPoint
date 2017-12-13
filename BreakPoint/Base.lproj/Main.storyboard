@@ -612,7 +612,7 @@
                         <viewLayoutGuide key="safeArea" id="Rhc-rG-cuT"/>
                     </view>
                     <connections>
-                        <outlet property="dercriptionTextField" destination="ECO-Ai-Vk8" id="38T-ub-ipt"/>
+                        <outlet property="descriptionTextField" destination="ECO-Ai-Vk8" id="Zn0-oi-E20"/>
                         <outlet property="doneButton" destination="035-Wt-BBT" id="4RF-49-8i9"/>
                         <outlet property="emailSearchTextField" destination="ZoW-UY-jp0" id="R44-1t-DOP"/>
                         <outlet property="groupMemberLabel" destination="fOv-JF-I0z" id="C4J-U3-Veg"/>
