@@ -45,7 +45,7 @@ class GroupFeedVC: UIViewController {
                 self.messageArray = messages
                 self.groupFeedTableView.reloadData()
                 if self.messageArray.count > 0 {
-                    self.groupFeedTableView.scrollToRow(at: IndexPath(row: self.messageArray.count - 1, section: 0) , at: UITableViewScrollPosition.bottom, animated: false)
+                    self.groupFeedTableView.scrollToRow(at: IndexPath(row: self.messageArray.count-1, section: 0) , at: .bottom, animated: false)
                 }
             })
         }
@@ -68,7 +68,7 @@ class GroupFeedVC: UIViewController {
     
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
 }
 extension GroupFeedVC: UITableViewDataSource, UITableViewDelegate{
