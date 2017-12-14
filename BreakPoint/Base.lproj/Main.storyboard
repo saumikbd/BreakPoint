@@ -624,6 +624,7 @@
                         <outlet property="groupTitle" destination="D6C-bF-qQA" id="F16-ss-ZSn"/>
                         <outlet property="membersLabel" destination="lAR-Cm-4f7" id="O7R-5s-Fus"/>
                         <outlet property="messageTextField" destination="o3k-xq-vJM" id="aRK-jW-w9i"/>
+                        <outlet property="sendButton" destination="1qg-mP-ztc" id="Ha2-RZ-HbH"/>
                         <outlet property="textEditingView" destination="tDe-tp-0dL" id="LF0-bm-QYC"/>
                     </connections>
                 </viewController>
