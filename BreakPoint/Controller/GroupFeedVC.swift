@@ -14,9 +14,11 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var groupTitle: UILabel!
     @IBOutlet weak var membersLabel: UILabel!
     @IBOutlet weak var groupFeedTableView: UITableView!
-    @IBOutlet weak var textEditingView: UIView!
     @IBOutlet weak var messageTextField: InsetTextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     
     var group: Group?
     var messageArray = [Message]()
@@ -31,8 +33,18 @@ class GroupFeedVC: UIViewController {
         groupFeedTableView.delegate = self
         groupFeedTableView.dataSource = self
         
-        textEditingView.bindToKeyboard()
+        tableHeight.constant = view.bounds.size.height - 180
+        stackView.bindToKeyboard()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(chatTap))
+        view.addGestureRecognizer(tap)
     }
+    
+    @objc func chatTap() {
+        self.view.endEditing(true)
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         groupTitle.text = group?.title
@@ -52,12 +64,10 @@ class GroupFeedVC: UIViewController {
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {
-        messageTextField.isEnabled = false
         sendButton.isEnabled = false
         if messageTextField.text != "" {
             DataService.instance.uploadPost(withMessage: messageTextField.text!, forId: (Auth.auth().currentUser?.uid)!, withGroupKey: (self.group?.key)!, completion: { (success) in
                 if success {
-                    self.messageTextField.isEnabled = true
                     self.sendButton.isEnabled = true
                     self.messageTextField.text = ""
                     self.groupFeedTableView.reloadData()
